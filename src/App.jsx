@@ -1,6 +1,15 @@
 import './App.css'
+import DropdownFilter from "./multi-select";
 
 function App() {
+  const [price, setPrice] = useState < Array < string >> ([]);
+  const options = [
+    { value: "inexpensive", label: "$" },
+    { value: "moderately inexpensive", label: "$$" },
+    { value: "moderately expensive", label: "$$$" },
+    { value: "expensive", label: "$$$$" }
+  ];
+
 
   //top navbar,
   //image with text on top, moves a little bit
@@ -326,7 +335,15 @@ function App() {
         <div class="content">
           <h2>My Custom Element</h2>
           <h1>Part 5: <br></br>The Product</h1>
-          <p> Soon, I plan to make a dropdown inspired by my case study.</p>
+          <p> I have made a dropdown inspired by my case study. Now, I cna use it in my other prjects too! There are a few things I still need to change, such as the shading when hovering over sections, but otherwise it is somewhat complete. Try using it below!</p>
+          <div>
+            <DropdownFilter
+              title="Price"
+              options={options}
+              selectedValues={price}
+              onChange={setPrice}
+            />
+          </div>
         </div>
       </div>
     </>
