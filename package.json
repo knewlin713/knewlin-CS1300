@@ -1,16 +1,19 @@
 {
-  "name": "webpage_1",
+  "name": "knewlin-CS1300",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "react-scripts start",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "deploy": "gh-pages -d build",
     "preview": "vite preview"
   },
   "dependencies": {
     "framer-motion": "^12.4.7",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.476.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
