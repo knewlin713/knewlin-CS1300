@@ -18,7 +18,7 @@ export default function Projects() {
                     imageUrl="src/assets/vendor.png"
                     title="Personas & Storyboarding"
                     description="Inspecting a public interface then illustrating user needs and experiences based on empirical observations through personas and storyboarding"
-                    navigate="knewlin-CS1300/demo2"
+                    navigate="demo2"
                 />
             </div>
         </div>
