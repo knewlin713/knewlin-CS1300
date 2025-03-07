@@ -35,8 +35,8 @@ function App() {
           <Route path="knewlin-CS1300/" element={<Home />} />
           <Route path="knewlin-CS1300/projects" element={<Projects />} />
           <Route path="knewlin-CS1300/resume" element={<Resume />} />
-          <Route path="knewlin-CS1300/projects/demo" element={<Demo />} />
-          <Route path="knewlin-CS1300/projects/demo2" element={<Demo2 />} />
+          <Route path="demo" element={<Demo />} />
+          <Route path="demo2" element={<Demo2 />} />
         </Routes>
       </BrowserRouter>
 
