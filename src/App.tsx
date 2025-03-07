@@ -25,18 +25,18 @@ function App() {
         <div className="navigation">
           <nav>
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/projects">Projects</Link></li>
-              <li><Link to="/resume">Resume</Link></li>
+              <li><Link to="">Home</Link></li>
+              <li><Link to="projects">Projects</Link></li>
+              <li><Link to="resume">Resume</Link></li>
             </ul>
           </nav>
         </div>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/demo" element={<Demo />} />
-          <Route path="/demo2" element={<Demo2 />} />
+          <Route path="" element={<Home />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="resume" element={<Resume />} />
+          <Route path="demo" element={<Demo />} />
+          <Route path="demo2" element={<Demo2 />} />
         </Routes>
       </BrowserRouter>
 
