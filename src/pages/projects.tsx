@@ -12,13 +12,13 @@ export default function Projects() {
                     imageUrl="src/assets/design annotation.jpg"
                     title="Accesible Redesign"
                     description="Analyzing and remaking multi-select from popular websites."
-                    navigate="knewlin-CS1300/demo"
+                    navigate="/demo"
                 />
                 <HoverCard
                     imageUrl="src/assets/vendor.png"
                     title="Personas & Storyboarding"
                     description="Inspecting a public interface then illustrating user needs and experiences based on empirical observations through personas and storyboarding"
-                    navigate="knewlin-CS1300/demo2"
+                    navigate="/demo2"
                 />
             </div>
         </div>
