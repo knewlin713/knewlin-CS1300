@@ -25,8 +25,8 @@ export default function HoverCard({ imageUrl, title, description, navigate }: Ho
         >
             <img src={imageUrl} alt="Background" className="card-image" />
             <div className="overlay">
-                <h3 className="title" style={{ color: "white" }}>{title}</h3>
-                <p className="description">{description}</p>
+                <h3 className="title" style={{ color: "white", fontSize: "1.5vw" }}>{title}</h3>
+                <p className="description" style={{ fontSize: "1.3vw" }}>{description}</p>
             </div>
         </div>
     );

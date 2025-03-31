@@ -4,8 +4,8 @@ export default function Demo2() {
     return (
         <div>
             <div className="content">
-                <h2>Interviewing and Recording</h2>
                 <h1>Observing Interaction of a Public Interface</h1>
+                <h2>Interviewing and Recording</h2>
                 <p>My first step to this process is finding a public interface that I can observe. Below, I have sketched out my inteface. In particular, I watched a Vending machine used by Brown Students in the Science Library. </p>
                 <div style={{ justifyContent: "center" }}>
                     <img style={{
@@ -35,15 +35,15 @@ export default function Demo2() {
                 <p>Although there is a label indicating that it accepts Brown ID cards, after swiping the brown ID, the payment interface tells the user to swipe with a different card, as the current card does not wok. Also, the sensor for Apple Pay works only sometimes.</p>
             </div>
             <div className="content" style={{ backgroundColor: "#fff5e6" }}>
-                <h2>Making an empathy map</h2>
                 <h1>Creating Personas</h1>
+                <h2>Making an empathy map</h2>
                 <p> Using the observations and interviews I collected my goal was to construct 2 personas by creating an empathy map, describing what users think, feel, say, and do, representing part of the spectrum of users I had observed. A good persona is one that someone can act out with confidence in different scenarios. My personas should be based on overarching trends I observed amongst all the users I interviewed from the previous section, while avoiding assumptions.  Below, I have created two personas that represent the people I interveiwed using the vending machine </p>
                 <img src="src/assets/Ari_Persona.png" alt="Persona Named Ari, is off the meal plan. Pays with apple pay, feel mediocore about interaction."></img>
                 <img src="src/assets/Sarah_persona.png" alt="Persona named Sarah, is on the meal plan, tries to pay wih meal plan with Brown ID, and is frusterated because it does not accept Brown ID."></img>
             </div>
             <div className="content">
-                <h2>Mapping Interaction from Beginning to End</h2>
                 <h1>Drawing a Storyboard</h1>
+                <h2>Mapping Interaction from Beginning to End</h2>
                 <p>Some qualities of a good storyboard include thinking about presenting authenticity, emotion, and simplicity.
                     I want to storyboard my persona's entire user journey from start to end.
                     I should reflect the goals of my persona and include all the steps for using this interface. Using this storyboard, you should better identify the goals and characteristics of my personas.

@@ -13,8 +13,8 @@ export default function Demo() {
     return (<>
         <div>
             <div className="content" style={{ backgroundColor: "#ffffff" }}>
-                <h2>The Concept</h2>
                 <h1>Part 1:<br></br>Input</h1>
+                <h2>The Concept</h2>
                 <p>I decided that I wanted to look into the multi-select dropdown tool, as I wanted to use it in a project I had in mind.
                     My first step was to investigate the use of multi-select dropdown tools online.
                     I looked specifically at Google Maps (price dropdown), Bing Shopping (brand dropdown), and Google Calendar (calendar dropdown).
@@ -97,8 +97,8 @@ export default function Demo() {
 
             </div>
             <div className="content" style={{ backgroundColor: "#fff5e6" }}>
-                <h2>Comparing Interactions</h2>
                 <h1>Part 2:<br></br>Output</h1>
+                <h2>Comparing Interactions</h2>
                 <p> An input, whether a keybaord tap or a cursor hover, can cause an output. In this case, An output may be the appearance of new elements, items changing color or shade, emboldened borders or text, or a shift in element focus. Below, I create a comprehensive, in-depth analysis of several inputs and their respective outputs. The table allows the easy comparison of multi-select dropdowns from each application.<br></br> An asterick (*) represents any notations regarding the VoiceOver useage.</p>
                 <table>
                     <tr>
@@ -277,9 +277,9 @@ export default function Demo() {
                 </table>
             </div>
             <div className="content">
-                <h2>Redsigning Interaction</h2>
                 <h1>Part 3: <br></br>State Models & Component Redesign
                 </h1>
+                <h2>Redsigning Interaction</h2>
                 <p>Even though the Bing Shoppping dropdown does have some important issues, I found that Google Maps Price Dorpdown had issues as well. Therefore, I decided that in order to investigate how to make the ideal dropdown, I first had to analyize the flow of interactions, and improve upon a current implementation. The Google Maps multi-select dropdown has some great features, but also some bad features. Below, I made an thorough state model of the Google Maps dropdown, when using both mouse and keyboard. Following those charts, I redesigned the state models in a way that would improve the current dropdown. I made these charts using Figma.  </p>
                 <h2 style={{ color: "#3C1518", paddingTop: "100px" }} > Original Flow State: Mouse</h2>
                 <img src="src/assets/Flow Chart Template (Copy).png" alt="bad flow chart"></img>
@@ -295,8 +295,8 @@ export default function Demo() {
                 <img src="src/assets/design annotation.jpg" alt="design which makes good sense"></img>
             </div>
             <div className="content" style={{ backgroundColor: "#fff5e6" }}>
-                <h2>Overview</h2>
                 <h1>Part 4: <br></br>Reflection</h1>
+                <h2>Overview</h2>
                 <p>Questions for myself: <br></br>
                     Where did the components you observed do well in terms of usability and accessibility? How have you applied this to your design?
                     When it came to voice over descriptions and navigation using tab and arrow keys, the components I observed succeeded in terms of accessibility. There were also common themes like arrows, darkening of itmes, and checkmarks, all of which I applied to my design.
@@ -320,8 +320,8 @@ export default function Demo() {
                 </p>
             </div>
             <div className="content">
-                <h2>My Custom Element</h2>
                 <h1>Part 5: <br></br>The Product</h1>
+                <h2>My Custom Element</h2>
                 <p> I have made a dropdown inspired by my case study. Now, I can use it in my other projects too! There are a few things I still need to change, such as the shading when hovering over sections, but otherwise it is somewhat complete. Try using it below!</p>
                 <DropdownFilter
                     title="Price"

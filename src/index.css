@@ -4,7 +4,7 @@
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #ECBF98;
+  background-color: white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -27,17 +27,17 @@
   align-items: center;
 }
 
-nav {
+.navigation nav {
   height: 100%;
 }
 
-nav ul {
+.navigation nav ul {
   list-style-type: none;
   display: flex;
 }
 
 
-nav ul li a {
+.navigation nav ul li a {
   text-decoration: none;
   font-weight: bold;
   color: #3C1518;
@@ -46,15 +46,24 @@ nav ul li a {
   transition: all 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
+.navigation nav ul li a:hover {
   background-color: #eeae77;
   transform: translateY(-2px);
+}
+
+div.content a {
+  color: #3C1518;
+  padding-top: 2%;
+  line-height: 150%;
+
+  font-size: 100%;
+  text-decoration: none;
 }
 
 .content {
   background-color: white;
   text-align: left;
-  padding: 100px 400px 100px 400px;
+  padding: 100px 20vw 100px 20vw;
 }
 
 div.content p {
@@ -62,6 +71,13 @@ div.content p {
   padding-top: 2%;
   line-height: 150%;
   font-size: 130%;
+}
+
+img {
+  max-width: 55vw;
+  border-color: #ECBF98;
+  border-width: thin;
+  border-style: solid;
 }
 
 div.content h1 {
@@ -90,14 +106,15 @@ div.content h3 {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  padding-left: 20vw;
+  padding-right: 20vw;
   padding-top: 30px;
 }
 
 th,
 td,
 tr {
-  padding: 20px;
+  padding: 2vw;
   border-bottom: 2px solid grey;
   text-align: left;
   line-height: 130%;
@@ -105,18 +122,9 @@ tr {
 }
 
 .td img {
-  max-width: 100px;
-  max-height: 200px;
+  max-width: 10vw;
+  max-height: 40vh;
 }
-
-img {
-  max-width: 1200px;
-  border-color: #ECBF98;
-  border-width: thin;
-  border-style: solid;
-}
-
-button {}
 
 .back-multi {
   width: 10vw;
@@ -199,7 +207,7 @@ button {}
 
 .hover-card {
   position: relative;
-  width: 30vw;
+  width: 24vw;
   height: 38vh;
   border-radius: 16px;
   overflow: hidden;
@@ -216,7 +224,7 @@ button {}
 .card-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
 }
 
@@ -238,14 +246,13 @@ button {}
   background: rgba(0, 0, 0, 0.8);
 }
 
-.title {
-  font-size: 1.25rem;
+.title h3 {
+  font-size: large;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
 .description {
-  font-size: 0.875rem;
   opacity: 0;
   color: white;
   transition: opacity 0.3s ease-in-out;
@@ -254,4 +261,387 @@ button {}
 .hover-card:hover .description {
   opacity: 1;
   color: white;
+}
+
+.redesignNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  min-height: 15vh;
+  align-items: center;
+}
+
+.redesignNav nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.redesignNav nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.redesignNav nav ul li {
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  margin: auto;
+}
+
+.redesignNav nav ul li a {
+  text-decoration: none;
+  font-size: 2vh;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  color: #141414;
+  padding: 2vh 1vw;
+  border-style: solid;
+  border-color: #DBDBDB;
+  border-radius: 1vw;
+  border-width: 1px;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.redesignNav nav ul li img {
+  max-height: 15vh;
+  border-color: #FFFFFF;
+}
+
+.redesignNav nav ul li a:hover {
+  background-color: #DBDBDB;
+  transform: translateY(-2px);
+}
+
+.redesignNav nav .nav_redesign.collapsed {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .redesignNav nav .nav_redesign {
+    display: none;
+  }
+
+  .redesignNav nav .nav_redesign.collapsed {
+    margin-top: 70px;
+    margin-right: 10px;
+    display: block;
+  }
+
+  .redesignNav nav .nav_redesign.collapsed a {
+    padding: 1.5vh 2vw;
+    background-color: #40a3ef;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 1vw;
+    transition: background-color 0.3s ease;
+  }
+
+  .redesignNav nav .nav_redesign.collapsed a:hover {
+    background-color: #4077ef;
+  }
+}
+
+.intro {
+  background-image: url(./assets/backgroundChurch.png);
+  background-size: 2000px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  height: 500px;
+  text-align: left;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.intro h1 {
+  font-weight: 700;
+  font-size: 500%;
+  padding-top: 50px;
+  padding-left: 10vw;
+  padding-right: 25vw;
+  color: white;
+}
+
+.intro a {
+  background-color: #FFFFFF;
+  color: #141414;
+  font-weight: 600;
+  display: block;
+  font-size: xx-large;
+  border-radius: 1vw;
+  box-sizing: border-box;
+  padding: 10px 40px 10px 40px;
+  border-style: solid;
+  border-color: #DBDBDB;
+  border-width: 1px;
+  max-width: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+
+.intro a:hover {
+  background-color: #DBDBDB;
+  transform: translateY(-2px);
+}
+
+.mass {
+  background-color: #FFFFFF;
+  height: max-content;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  margin: 0;
+  box-sizing: border-box;
+  padding-bottom: 50px;
+}
+
+.holder {
+  display: flex;
+  justify-content: center;
+}
+
+
+.mass h1 {
+  color: #141414;
+  font-weight: 700;
+  font-size: 250%;
+  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.mass h2 {
+  font-weight: 700;
+  font-size: x-large;
+}
+
+.mass h3 {
+  font-weight: 500;
+  font-size: x-large;
+}
+
+.mass p {
+  font-weight: 400;
+  font-size: x-large;
+}
+
+.events {
+  padding-top: 10px;
+  background-color: #dbdbdb;
+  height: fit-content;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+
+.resources {
+  background-color: #FFFFFF;
+  padding-bottom: 50px;
+  height: fit-content;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.resources a {
+  margin-left: 15px;
+  margin-right: 15px;
+  display: block;
+  color: white;
+  padding: 50px 4vw 70px 4vw;
+  font-weight: 700;
+  font-size: xx-large;
+  border-radius: 1vw;
+  align-content: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(./assets/reading.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.resources a:hover {
+  background-blend-mode: difference;
+  transform: translateY(-2px);
+}
+
+.overlayRedesign {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contact {
+  background-color: #40a3ef;
+  height: 500px;
+  display: flex;
+  text-align: center;
+  padding-top: 10px;
+  justify-content: center;
+  box-sizing: border-box
+}
+
+.contact h1 {
+  padding-top: 75px;
+  font-size: 250%;
+}
+
+.contact h3 {
+  line-height: 50px;
+  font-size: x-large;
+  font-weight: 500;
+}
+
+.contact-church {
+  margin: 1vw 0px;
+}
+
+.contact-text {
+  margin: 0vw 4vw;
+  text-align: left;
+  align-content: left;
+}
+
+.dropdown {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 20px;
+  font-size: x-large;
+  font-weight: 600;
+  max-width: 80%;
+  margin: auto;
+  border-radius: 1vw;
+}
+
+.dropdown span {
+  background-color: #40a3ef;
+  border-radius: 0.5vw;
+  padding: 10px 30px;
+  font-weight: 600;
+  width: 450px;
+  text-align: left;
+}
+
+.dropdown-content {
+  display: none;
+  width: 450px;
+  background-color: #f9f9f9;
+  font-weight: 600;
+  border-radius: 1vw;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  padding: 10px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  text-align: left;
+  align-content: center;
+  justify-content: center;
+  margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content p {
+  transition: background-color 0.3s ease;
+  padding: 0px 5px;
+}
+
+.dropdown-content p:hover {
+  background-color: #DBDBDB;
+  padding: 0px 5px;
+  transition: background-color 0.3s ease;
+}
+
+@media only screen and (max-width: 1200px) {
+  .intro {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .intro {
+    background-size: 200vw;
+    height: max-content;
+  }
+
+  .intro h1 {
+    font-size: 400%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .intro a {
+    font-size: large;
+    padding: 8px 30px;
+  }
+
+  .mass {
+    padding-left: 0;
+    padding-right: 0;
+    height: 900px;
+    text-align: left;
+  }
+
+  .mass h1 {
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  .mass p {
+    padding: 0;
+    margin-left: 6vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .holder {
+    flex-direction: column;
+  }
+
+  .contact {
+    height: max-content;
+    padding: 50px 0px;
+  }
+
+  .contact-church img {
+    margin-left: 30px;
+    width: 40vw;
+  }
+
+  .contact h1 {
+    margin-top: 0;
+    padding-top: 10px;
+  }
+
+  .contact-text {
+    max-width: min-content;
+
+  }
+
+  .contact h3 {
+    padding: 0;
+    font-size: large;
+    line-height: 40px;
+  }
+
 }
