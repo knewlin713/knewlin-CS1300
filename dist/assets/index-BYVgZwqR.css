@@ -346,7 +346,7 @@ tr {
 }
 
 .intro {
-    background-image: url(dist/assets/backgroundChurch-B3dFXLA5.png);
+    background-image: url(/dist/assets/backgroundChurch-B3dFXLA5.png);
     background-size: 2000px;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -455,7 +455,7 @@ tr {
     border-radius: 1vw;
     align-content: center;
     text-align: center;
-    background-image: linear-gradient(#0003, #00000080), url(dist/assets/reading-D4PyWobb.jpg);
+    background-image: linear-gradient(#0003, #00000080), url(/dist/assets/reading-D4PyWobb.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
