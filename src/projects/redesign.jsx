@@ -1,7 +1,7 @@
 
 export default function Redesign() {
     return (<div style={{ paddingTop: "10vh", backgroundColor: "white" }}>
-        <div className="intro">
+        <div className="intro" style={{ backgroundImage: "url(src/assets/backgroundChurch.png)" }}>
             <h1>Welcome to Saint Mary's Church, Cranston!</h1>
             <div style={{ paddingLeft: "10vw", paddingBottom: "50px" }}>
                 <a>Learn more</a>
@@ -62,7 +62,7 @@ export default function Redesign() {
         <div className="resources">
             <h1 style={{ fontSize: "250%" }}>Resources</h1>
             <div className="holder">
-                <a> Daily Reading</a>
+                <a style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(src/assets/reading.jpg)" }}> Daily Reading</a>
                 <a style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(src/assets/news.jpg)" }}><div className="overlayRedesign"></div>
                     Catholic News</a>
                 <a style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(src/assets/giving.jpg)" }}><div className="overlayRedesign"></div>
