@@ -5,7 +5,7 @@ import { Link } from "react-router";
 export default function Demo3() {
 
     return (
-        <div>
+        <div style={{ marginLeft: "20vw", marginRight: "20vw" }}>
             <div className="content">
                 <h1>Identifying Usability Issues</h1>
                 <h2>Analyzing and Identifying flaws in an Interface</h2>
@@ -69,7 +69,7 @@ export default function Demo3() {
                 <p> These problems make it difficult to use the website, and negatively affect user experience. Users may not be able to naviagte around the website efficently or be able to read or understand the information present. Some users may feel as if the website was not made with them in consideration.  </p>
 
             </div>
-            <div className="content" style={{ backgroundColor: "#fff5e6" }}>
+            <div className="content" >
                 <h1>Visual Redesign</h1>
                 <h2>Creating a visual design style guide and mockups</h2>
                 <p>Below, I have created a Visual Design Style Guide (made in Figma)

@@ -18,7 +18,7 @@ export default function DropdownFilter({ title, options, selectedValues, onChang
     return (
         <div className="back-multi">
             <div className="title-multi">
-                <span className="title_text">{title}</span>
+                <span className="title_text" style={{ color: "black" }}>{title}</span>
                 <button onClick={() => setIsOpen(!isOpen)}
                     className="alt-button">
                     <motion.div

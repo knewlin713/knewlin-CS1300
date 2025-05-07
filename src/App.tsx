@@ -4,10 +4,10 @@ import { HashRouter, Routes, Route, Link, useLocation } from "react-router-dom";
 import Projects from "./pages/projects.js";
 import Home from "./pages/home.js";
 import Resume from "./pages/resume.js";
-import Demo from "./projects/demo1.js";
-import Demo2 from "./projects/demo2.js";
-import Demo3 from "./projects/demo3.js";
-import Redesign from "./projects/redesign.jsx";
+import Demo from "../public/demo1.js";
+import Demo2 from "../public/demo2.js";
+import Demo3 from "../public/demo3.js";
+import Redesign from "../public/redesign.jsx";
 
 const App: React.FC = () => {
   return ((<HashRouter>
@@ -29,10 +29,13 @@ const Base: React.FC = () => {
     <div>
       {location.pathname !== '/redesign' && (
         <div className="navigation">
-          <nav>
+          <div className="nav-left">
+            <Link to="/" className="nav-left-button">Kaley Newlin</Link>
+          </div>
+          <nav className="nav-right">
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/projects">Projects</Link></li>
+              <li><Link to="/projects">Work</Link></li>
+              <li><Link to="/projects">Play</Link></li>
               <li><Link to="/resume">Resume</Link></li>
             </ul>
           </nav>

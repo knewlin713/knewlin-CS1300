@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HoverCard from "../Elements/projectCards.js";
+import HoverCard from "../Elements/1projectCards.js";
 
 export default function Projects() {
 

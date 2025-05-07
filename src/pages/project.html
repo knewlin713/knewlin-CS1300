@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <style>
+        .project-container {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .project-container.animate {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div className="content">
+            <h2>Projects</h2>
+            <p>Please explore my projects below!</p>
+            <div id="hoverAnimatedRight" class="hoverAnimated" style="
+                    display: flex;
+                    height: 50vh;
+                    padding-right: 0vw;
+                    padding-left: 10vw;
+                    padding-top: 2vh;
+                    padding-bottom: 2vh;
+                    justify-content: space-evenly;
+                " ref="elementRef">
+                <HoverCard imageUrl="src/assets/design annotation.jpg" title="Accesible Redesign"
+                    description="Analyzing and remaking multi-select from popular websites." navigate="/demo" />
+                <HoverCard imageUrl="src/assets/Ari_Persona.png" title="Personas & Storyboarding"
+                    description="Inspecting a public interface then illustrating user needs and experiences based on empirical observations through personas and storyboarding"
+                    navigate="/demo2" />
+            </div>
+            <div id="hoverAnimatedLeft" class="hoverAnimated" style="
+                                            display: flex;
+                                            height: 50vh;
+                                            padding-right: 10vw;
+                                            padding-left: 0vw;
+                                            padding-top: 2vh;
+                                            padding-bottom: 2vh;
+                                            justify-content: space-evenly;
+                                        " ref="elementRef">
+                <HoverCard imageUrl="src/assets/Redesign_Computer.png" title="Responsive Redesign"
+                    description="Identifing flaws in an existing interface, create mockups for various screen sizes, and building a responsive website based on those prototypes."
+                    navigate="/demo3" />
+                <HoverCard imageUrl="src/assets/SesameHome.png" title="Iterative Design"
+                    description="Working with a startup and team to design user personalization" navigate="/demo3" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const element = document.getElementById('projects');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    element.classList.add('animate');
+                } else {
+                    element.classList.remove('animate');
+                }
+            });
+        });
+
+        observer.observe(element);
+        animateOnView('hoverAnimatedRight', 'fadeInRight');
+        animateOnView('hoverAnimatedLeft', 'fadeInLeft');
+
+
+    </script>
+
+</body>
+
+</html>

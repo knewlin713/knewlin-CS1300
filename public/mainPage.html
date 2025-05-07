@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        .animate {
+            opacity: 1;
+            transition: opacity 1s;
+        }
+
+        .project-container {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .project-container.animate {
+            opacity: 1;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+    <link rel="stylesheet" crossorigin href="src/index.css">
+</head>
+
+<body>
+
+    <!-- This is the background-->
+    <canvas id="waveCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById('waveCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+
+        let mouseX = width / 2;
+        let mouseY = height / 2
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function drawWave(yOffset, frequency, amplitude, speed, phaseShift) {
+            ctx.beginPath();
+            ctx.moveTo(0, yOffset);
+            for (let x = 0; x < width; x++) {
+                let distanceToMouseX = Math.abs(x - mouseX);
+                let distanceToMouseY = Math.abs(yOffset - mouseY);
+                let xInfluence = Math.exp(-distanceToMouseX / 300);
+                let yInfluence = Math.exp(-distanceToMouseY / 500);
+                let localAmplitude = amplitude * xInfluence * yInfluence;
+
+                let y = yOffset + localAmplitude * Math.sin((x * frequency) + speed + phaseShift);
+                ctx.lineTo(x, y);
+            }
+            ctx.lineWidth = 1.2;
+            ctx.strokeStyle = 'white';
+            ctx.stroke();
+        }
+
+        let time = 0;
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            time += 0.02;
+            for (let i = 0; i < 30; i++) {
+                drawWave(100 + i * 50, 0.02, 45, time, i);
+            }
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        window.addEventListener('resize', () => {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+        });
+    </script>
+
+    <!-- This is the navbar-->
+    <div class="navigation">
+
+        <button class="nav-left-button" style="padding-left: 20px;">Kaley Newlin</button>
+
+        <nav>
+            <ul>
+                <li><a href="">Work</a></li>
+                <li><a href="">Play</a></li>
+                <li><a href="">Resume</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Top of page, with introduction and picture.-->
+    <div style="display: flex; justify-content: center; width: 100%;">
+        <div
+            style="display: flex; flex-direction: row; justify-content: space-between; padding-left:20vw; padding-top: 200px;">
+            <div id="Typed" style="text-align: left; width: 40vw; padding-left: 10vw; padding-right: 10vw;">
+                <div class="rounded-box">
+                    <h1 id="header1" class="typed-header"></h1>
+                    <h1 id="header2" class="typed-header"></h1>
+                    <h2 id="header3" class="typed-header"></h2>
+                </div>
+                <div class="rounded-box">
+                    <div class="icon-row">
+                        <div class="icon-container">
+                            <img src="src/assets/linkedin.png" alt="my linked in" class="icon">
+                        </div>
+                        <div class="icon-container">
+                            <img src="src/assets/githubwhite.png" alt="my github" class="icon">
+                        </div>
+                        <div class="icon-container">
+                            <img src="src/assets/mail.png" alt="my email" class="icon">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div>
+                <div style=" padding-bottom: 100px; height: 50vh; width: 50vw;" id="firAnimated"
+                    class="firAnimated fadeInRight">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        const info1 = "Hi, I'm";
+        const info2 = "KALEY NEWLIN";
+        const info3 = 'A software engineer interested in designing with creative interactions, studying <span style="color: #FFB70D;">Computer Science </span>and <span style="color: #90D5FF;">Cognitive Neuroscience</span> <span style="color: #B38A66;">@Brown</span>.';
+        const speed = 30;
+
+        let header1Typed = "";
+        let header2Typed = "";
+        let header3Typed = "";
+
+        const header1El = document.getElementById("header1");
+        const header2El = document.getElementById("header2");
+        const header3El = document.getElementById("header3");
+
+        function typed() {
+            if (header1Typed.length < info1.length) {
+                header1Typed += info1.charAt(header1Typed.length);
+                header1El.textContent = header1Typed;
+            }
+
+            if (header2Typed.length < info2.length) {
+                header2Typed += info2.charAt(header2Typed.length);
+                header2El.textContent = header2Typed;
+            }
+
+            if (header3Typed.length < info3.length) {
+                header3Typed += info3.charAt(header3Typed.length);
+                header3El.innerHTML = header3Typed;
+            }
+
+            if (
+                header1Typed.length < info1.length ||
+                header2Typed.length < info2.length ||
+                header3Typed.length < info3.length
+            ) {
+                setTimeout(typed, speed);
+            } else {
+                header1El.classList.add("animate");
+                header2El.classList.add("animate");
+                header3El.classList.add("animate");
+            }
+        }
+
+        typed();
+    </script>
+
+    <!-- This is the projects section of the page -->
+    <div class="content" style="margin-top: 200px;">
+        <div class="rounded-box" style="margin-left: 5vw;">
+            <h1 style="font-size: 300%;">Projects</h1>
+            <h2 style="font-size: 150%;"> With each project, I solve real-world
+                design challenges by
+                focusing on user
+                needs,
+                behaviors, and experiences. Through each of my projects I challenge a daily human experience or
+                interaction and
+                study it, evaluating how to improve it. </h2>
+        </div>
+        <div id="hoverAnimatedRight" class="hoverAnimated" style="
+                        display: flex;
+                        flex-direction: row;
+                        height: 50vh;
+                        padding-top: 2vh;
+                        padding-bottom: 2vh;
+                        justify-content: space-evenly;
+                    " ref="elementRef">
+
+            <div class="hover-card" data-image-url="src/assets/design annotation.jpg" data-title="Accesible Redesign"
+                data-description="Analyzing and remaking multi-select from popular websites." data-navigate="/demo">
+                <img class="card-image" alt="Background">
+                <div class="overlay">
+                    <h3 class="title"></h3>
+                    <p class="description"></p>
+                </div>
+            </div>
+
+
+            <div class="hover-card" data-image-url="src/assets/Ari_Persona.png" data-title="Personas & Storyboarding"
+                data-description="Inspecting a public interface then illustrating user needs and experiences based on empirical observations through personas and storyboarding"
+                data-navigate="/demo2">
+                <img class="card-image" alt="Background">
+                <div class="overlay">
+                    <h3 class="title"></h3>
+                    <p class="description"></p>
+                </div>
+            </div>
+        </div>
+        <div id="hoverAnimatedLeft" class="hoverAnimated" style="
+                                                display: flex;
+                                                height: 50vh;
+                                                padding-top: 2vh;
+                                                padding-bottom: 2vh;
+                                                justify-content: space-evenly;
+                                            " ref="elementRef">
+            <div class="hover-card" data-image-url="src/assets/Redesign_Computer.png" data-title="Responsive Redesign"
+                data-description="Identifing flaws in an existing interface, create mockups for various screen sizes, and building a responsive website based on those prototypes."
+                data-navigate="#/demo3">
+                <img class="card-image" alt="Background">
+                <div class="overlay">
+                    <h3 class="title"></h3>
+                    <p class="description"></p>
+                </div>
+            </div>
+
+
+            <div class="hover-card" data-image-url="src/assets/SesameHome.png" data-title="Iterative Design"
+                data-description="Working with a startup and team to design user personalization"
+                data-navigate="https://vlin39.github.io/Sesame-2/">
+                <img class="card-image" alt="Background">
+                <div class="overlay">
+                    <h3 class="title"></h3>
+                    <p class="description"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="src/elements/projectCards.js"></script>
+    <script>
+        const element = document.getElementById('projects');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    element.classList.add('animate');
+                } else {
+                    element.classList.remove('animate');
+                }
+            });
+        });
+
+        observer.observe(element);
+        animateOnView('hoverAnimatedRight', 'fadeInRight');
+        animateOnView('hoverAnimatedLeft', 'fadeInLeft');
+
+
+    </script>
+</body>
+
+</html>
